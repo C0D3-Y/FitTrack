@@ -82,7 +82,7 @@ function deleteWorkout(id) {
   if (!confirm('Are you sure you want to delete this workout?')) return;
 
   let workouts = getWorkouts();
-  workouts = workouts.filter(w => w.id !== id);
+  workouts = workouts.filter((w) => w.id !== id);
   saveWorkouts(workouts);
 
   renderAll();
@@ -91,7 +91,7 @@ function deleteWorkout(id) {
 
 function startEdit(id) {
   const workouts = getWorkouts();
-  const workout = workouts.find(w => w.id === id);
+  const workout = workouts.find((w) => w.id === id);
   if (!workout) return;
 
   const container = document.getElementById(`workout-${id}`);
@@ -126,7 +126,7 @@ function saveEdit(id) {
   }
 
   let workouts = getWorkouts();
-  const index = workouts.findIndex(w => w.id === id);
+  const index = workouts.findIndex((w) => w.id === id);
 
   if (index !== -1) {
     workouts[index] = { ...workouts[index], date, type, duration };
@@ -182,7 +182,7 @@ function renderWorkoutList() {
   });
 
   container.innerHTML = sorted
-    .map(w => {
+    .map((w) => {
       const future = isFutureDate(w.date);
       const futureClass = future ? 'future-workout' : '';
       const futureLabel = future ? ' <span class="future-badge">(Pending)</span>' : '';
@@ -212,7 +212,7 @@ function renderWeeklySummary() {
   const sevenDaysAgo = new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000);
   sevenDaysAgo.setHours(0, 0, 0, 0);
 
-  const weeklyWorkouts = allWorkouts.filter(w => {
+  const weeklyWorkouts = allWorkouts.filter((w) => {
     const workoutDate = new Date(w.date + 'T00:00:00');
     return workoutDate >= sevenDaysAgo && workoutDate <= today;
   });
@@ -226,7 +226,7 @@ function renderWeeklySummary() {
   document.getElementById('avg-duration').textContent = avg;
 
   const typeMinutes = {};
-  weeklyWorkouts.forEach(w => {
+  weeklyWorkouts.forEach((w) => {
     typeMinutes[w.type] = (typeMinutes[w.type] || 0) + (w.duration || 0);
   });
 
