@@ -14,10 +14,13 @@ https://github.com/user-attachments/assets/c0a77f04-24df-47e0-883e-dd2e3579107b
 
 This demonstration includes:
 
-- Application setup and architecture overview
-- Live walkthrough of the FitTrack MVP workflow
-- Evidence of CI pipeline checks in GitHub Actions
-- Discussion of development limitations encountered
-- Review of the Beta sprint plan (Week 9–12)
+* Application setup and architecture overview
+* Live walkthrough of the FitTrack MVP workflow
+* Evidence of CI pipeline checks in GitHub Actions
+* Discussion of development limitations encountered
+* Review of the Beta sprint plan (Week 9–12)
 
 The demo shows the system running locally and demonstrates the completed MVP functionality including workout logging, viewing history, and persistent storage using localStorage.
+
+
+
