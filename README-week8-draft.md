@@ -87,11 +87,11 @@ See .github/workflows/ci.yml for configuration.
 
 ### Before Submitting (Contributor Checklist)
 
-Before pushing changes, always run:
+Before pushing changes, always ADD PRETTIER and run:
 
 ```bash
 npm run format     # Auto-fix all formatting
-npm run format:check  # Verify formatting (optional but recommended)
+npm run format:check  # Verify formatting
 
 **All contributions must follow our Definition of Done:
 See: Definition of Done**
